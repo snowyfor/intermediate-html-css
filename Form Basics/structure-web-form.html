@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- insight
+<ul> <li> & <p> merupakan structural elements yang digunakan untuk mem-wrap label dengan inputnya
+1. radio button di-wrap dengan <ul> <li>
+2. input & dropdown di-wrap dengan <p>
+-->
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>Your first HTML form, styled</title>
+		<style>
+            h1 {
+                margin-top: 0;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            form {
+                margin: 0 auto;
+                width: 400px;
+                padding: 1em;
+                border: 1px solid #ccc;
+                border-radius: 1em;
+            }
+
+            div + div {
+                margin-top: 1em;
+            }
+
+            label span {
+                display: inline-block;
+                text-align: right;
+            }
+
+            input,
+            textarea {
+                font: 1em sans-serif;
+                width: 250px;
+                box-sizing: border-box;
+                border: 1px solid #999;
+            }
+
+            input[type="checkbox"],
+            input[type="radio"] {
+                width: auto;
+                border: none;
+            }
+
+            input:focus,
+            textarea:focus {
+                border-color: #000;
+            }
+
+            textarea {
+                vertical-align: top;
+                height: 5em;
+                resize: vertical;
+            }
+
+            fieldset {
+                width: 250px;
+                box-sizing: border-box;
+                border: 1px solid #999;
+            }
+
+            button {
+                margin: 20px 0 0 0;
+            }
+
+            label {
+                position: relative;
+                display: inline-block;
+            }
+
+            p label {
+                width: 100%;
+            }
+
+            label em {
+                position: absolute;
+                right: 5px;
+                top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="http://httpbin.org/post" method="post" target="_blank">
+            <h1>Payment form</h1>
+            <p>
+                Required fields are followed by
+                <strong><span aria-label="required">*</span></strong>
+            </p>
+            <section>
+                <h2>Contact information</h2>
+                <fieldset>
+                    <legend>Title</legend>
+                    <ul>
+                        <li>
+                            <label for="title-1">
+                                <input type="radio" name="title" id="title-1" value="A">
+                                Ace
+                            </label>
+                        </li>
+                            <label for="title-2">
+                                <input type="radio" name="title" id="title-2" value="K">
+                                King
+                            </label>
+                        <li>
+                            <label for="title-3">
+                                <input type="radio" name="title" id="title-3" value="Q">
+                                Queen
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <p>
+                    <label for="name">
+                        <span>Name: </span>
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="text" name="user-name" id="name" required>
+                </p>
+                <p>
+                    <label for="mail">
+                        <span>Email: </span>
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="email" name="user-mail" id="mail" required>
+                </p>
+                <p>
+                    <label for="pw">
+                        <span>Password: </span>
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="password" name="user-password" id="pw" required>
+                </p>
+            </section>
+            <section>
+                <h2>Payment information</h2>
+                <p>
+                    <label for="card">
+                        <span>Card-type: </span>
+                    </label>
+                    <select name="card" id="card">
+                        <option value="visa">Visa</option>
+                        <option value="mc">Mastercard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="card-num">
+                        <span>Card number: </span>
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="number" name="card-number" id="card-num">
+                </p>
+                <p>
+                    <label for="ex-date">
+                        <span>Expiration date: </span>
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input
+                    type="text"
+                    name="expiration-date"
+                    id="ex-date"
+                    placeholder="MM/YY"
+                    pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+                </p>
+            </section>
+            <section>
+                <p><button type="submit">Validate the payment</button></p>
+            </section>
+        </form>
+    </body>

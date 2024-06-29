@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>HTML5 controls: Task 3</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h2>Cari Bus</h2>
+      <ul>
+        <li>
+            <label for="PO">Pilih PO</label>
+            <input type="search" name="PO" id="PO">
+        </li>
+        <li>
+            <label for="jadwal-berangkat">Pilih jadwal berangkat</label>
+            <input
+              type="date"
+              name="jadwal-berangkat"
+              id="jadwal-berangkat"
+              min="2024-07-06"
+              max="2024-08-31"
+              step="7">
+        </li>
+        <li>
+            <label for="1">datetime-local</label>
+            <input type="datetime-local" name="1" id="1">
+        </li>
+        <li>
+            <label for="2">month</label>
+            <input type="month" name="2" id="2">
+        </li>
+        <li>
+            <label for="3">week</label>
+            <input type="week" name="3" id="3">
+        </li>
+        <li>
+            <label for="4">time</label>
+            <input type="time" name="4" id="4">
+        </li>
+        <li>
+          <button>Pesan</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+
+</html>
