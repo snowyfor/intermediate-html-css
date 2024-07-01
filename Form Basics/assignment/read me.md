@@ -9,3 +9,7 @@ HTML controls - Source: https://developer.mozilla.org/en-US/docs/Learn/Forms/Tes
 Other controls - Source: https://developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_Other_controls
 
 Styling web form - Source: https://developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_Styling_basics 
+
+Advanced styling - Source: https://developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_Advanced_styling 
+-
+solution : https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/marking.md#task-1
